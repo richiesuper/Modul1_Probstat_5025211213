@@ -383,7 +383,7 @@ Output:
   [10] "0.269739027633349"
 ```
 
-# b) Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+b) Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
 
 Kode:
 
