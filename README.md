@@ -20,7 +20,7 @@ a) Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara
 
 Kode:
 
-```{r}
+```r
 x <- 3
 p <- 0.2
 
@@ -44,7 +44,7 @@ b) Mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana
 
 Kode:
 
-```{r}
+```r
 n <- 10000
 p <- 0.2
 
@@ -72,7 +72,7 @@ c) Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 
 Kode:
 
-```{r}
+```r
 msg <- "Berdasarkan hasil output dari poin (a) dan (b), dapat disimpulkan bahwa
 pada poin (b), dengan menggunakan sebuah random variable yang dihasilkan secara
 pseudo-random oleh fungsi rgeom, akan dihasilkan output yang bisa berubah pada
@@ -97,7 +97,7 @@ d) Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
 
 Kode:
 
-```{r}
+```r
 hist(rgeom(n, p), main = "Histogram Distribusi Geometrik", labels = TRUE)
 ```
 
@@ -109,7 +109,7 @@ e) Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 
 Kode:
 
-```{r}
+```r
 msg <- "Rataan (μ) dapat dicari dengan rumus 1/p untuk mencapai keberhasilan pertama
 dan dengan rumus (1-p)/p untuk x-1 kegagalan sebelum keberhasilan pertama.
 
@@ -143,7 +143,7 @@ a) Peluang terdapat 4 pasien yang sembuh.
 
 Kode:
 
-```{r}
+```r
 x <- 4
 n <- 20
 p <- 0.2
@@ -160,7 +160,7 @@ b) Gambarkan grafik histogram berdasarkan kasus tersebut.
 
 Kode:
 
-```{r}
+```r
 x <- seq(0, 20)
 plot(x, dbinom(x, n, p),
 	type = 'h',
@@ -177,7 +177,7 @@ c) Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
 
 Kode:
 
-```{r}
+```r
 msg <- "Rataan (μ) dapat dicari dengan rumus n*p.
 
 Varians (σ²) dapat dicari dengan rumus n*p*q atau n*p*(1-p).
@@ -210,7 +210,7 @@ a) Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
 
 Kode:
 
-```{r}
+```r
 x <- 6
 l <- 4.5
 sprintf("Pois(l) = %g", dpois(x, l))
@@ -227,7 +227,7 @@ b) Simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit
 
 Kode:
 
-```{r}
+```r
 n <- 365
 hist(rpois(n, l), main = "Histogram Distribusi Poisson", xlab = "Jumlah bayi", labels = TRUE)
 ```
@@ -240,7 +240,7 @@ c) dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
 
 Kode:
 
-```{r}
+```r
 sprintf("Hasil poin (a) dikalian 365 = %g", dpois(x, l) * n)
 
 msg <- "Hasil poin (a) hanya mempertimbangkan terjadinya kelahiran 6 bayi pada
@@ -269,7 +269,7 @@ d) Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
 
 Kode:
 
-```{r}
+```r
 msg <- "Rataan (μ) setara dengan lambda.
 
 Varians (σ²) juga setara dengan lambda.
@@ -299,7 +299,7 @@ a) Fungsi Probabilitas dari Distribusi Chi-Square.
 
 Kode:
 
-```{r}
+```r
 x <- 2
 v <- 10
 sprintf("X²(v) = %g", dchisq(x, v))
@@ -315,7 +315,7 @@ b) Histogram dari Distribusi Chi-Square dengan 100 data random.
 
 Kode:
 
-```{r}
+```r
 hist(rchisq(100, v), main = "Histogram Distribusi Chi-Squared", labels = TRUE)
 ```
 
@@ -327,7 +327,7 @@ c) Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
 
 Kode:
 
-```{r}
+```r
 msg <- "Rataan (μ) setara dengan v.
 
 Varians (σ²) setara dengan 2*v.
@@ -357,7 +357,7 @@ a) Fungsi Probabilitas dari Distribusi Exponensial
 
 Kode:
 
-```{r}
+```r
 n <- 10
 l <- 3
 paste("f(λ) = ", dexp(n, l))
@@ -387,7 +387,7 @@ b) Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan 
 
 Kode:
 
-```{r}
+```r
 hist(rexp(10, l), main = "Histogram Distribusi Exponensial, n = 10", labels = TRUE)
 hist(rexp(100, l), main = "Histogram Distribusi Exponensial, n = 100", labels = TRUE)
 hist(rexp(1000, l), main = "Histogram Distribusi Exponensial, n = 1000", labels = TRUE)
@@ -412,7 +412,7 @@ c) Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100
 
 Kode:
 
-```{r}
+```r
 n <- 100
 l <- 3
 set.seed(1)
@@ -451,7 +451,7 @@ a) Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2),
 
 Kode:
 
-```{r}
+```r
 n <- 100
 m <- 50
 stddev <- 8
@@ -488,7 +488,7 @@ b) Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaa
 
 Kode:
 
-```{r}
+```r
 hist(rnorm(n, m, stddev), breaks = 50, main = "5025211213_Richie Seputro_Probstat_A_DNhistogram")
 ```
 
@@ -500,7 +500,7 @@ c) Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
 
 Kode:
 
-```{r}
+```r
 paste("Varians (σ²) = ", sd(rnorm(n, m, stddev)) ^ 2)
 ```
 
